@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import MobileNav from './MobileNav'
+import { SignedIn, SignedOut } from '@clerk/nextjs'
+import { UserButton } from '@clerk/nextjs'
 
 const Navbar = () => {
   return (
@@ -11,15 +13,22 @@ const Navbar = () => {
         src="/icons/logo.svg"
         width={32}
         height={32}
-        alt='V-room'
+        alt='Yoom'
         className='max-sm:size-10'
          />
          <p className='text-[26px] font-extrabold text-white max-sm:hidden'>
-          V-room
+          Yoom
          </p>
       </Link>
       <div className='flex-between gap-5'>
         {/* Clerk user management */}
+
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+
+
+
         <MobileNav />
       </div>
     </nav>
