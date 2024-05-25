@@ -1,1 +1,5 @@
-Now we are diving into the grid where we will have all of our participants within the meeting. The participants layout will be dependent upon layout state that the user chooses so we have created a useState hook as layout and setLayout..created the callLayout component and used switch statement to write the logic about the placement of speaker and the rest if them.. 
+Now we are embedding the Dropdown menu from the shadcn component which will add the options in the meeting section..proceeding with styling the Dropdown menu.
+
+
+2.49.37 date - 22-05
+importing the dropdownmenu component from the shadcn..and adding the proper styles to it. added couple of buttons to the meeting instance like the participants button where we can view the members who have joined the meeting and the statistics button to view the latency and stats related to the meeting about quality..
