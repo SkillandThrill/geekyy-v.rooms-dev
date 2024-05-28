@@ -149,7 +149,7 @@ const MeetingTypeList = () => {
             image="/icons/checked.svg"
             buttonIcon="/icons/copy.svg"
             buttonText="Copy Meeting Link"
-            />
+            />  
         )}
 
         <MeetingModal 
