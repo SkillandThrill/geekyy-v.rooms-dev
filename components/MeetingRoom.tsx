@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Flag, LayoutList, Search, Users } from 'lucide-react'
 import { useSearchParams } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 
 type CallLayoutType = 'grid' | 'speaker-left' | 'speaker-right'
 
@@ -23,6 +24,8 @@ const MeetingRoom = () => {
 
   const [showParticipants, setShowParticipants] = useState(false)
 
+
+  const  router=  useRouter();
 const {useCallCallingState} = useCallStateHooks()
 const callingState = useCallCallingState();
 if(callingState !=CallingState.JOINED) return <Loader/>
@@ -49,7 +52,7 @@ if(callingState !=CallingState.JOINED) return <Loader/>
         </div>
       </div>
       <div className='fixed bottom-0 flex w-full items-center justify-center gap-5 flex-wrap'>
-        <CallControls/>
+        <CallControls onLeave={() => router.push('/')}/>
 
 
       <DropdownMenu>
