@@ -58,6 +58,14 @@
 
 /* ==== clerk class override ===== */
 
+.cl-providerIcon__github {
+    filter: invert(1);
+}
+
+.cl-providerIcon__apple {
+    filter: invert(1);
+}
+
 .cl-userButtonPopoverActionButtonIcon {
     color: white;
 }
